@@ -4,19 +4,39 @@ package com.example.doum.domain.dto.lee;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+
 @Component
 @Data
 public class UsersDTO {
 //마이페이지 유저들의 DTO
+//erd 에서 유저 테이블
+
+    // 유저 아이디
+    private String userId;
     private Long providerId;
-    private String providerName;
-    private int age;
-    private String location;
-    private String qualifications;
-    private String availableDays;
+
+    //유저의 이메일
+    private String email;
+    //유저 등록 날짜
+    private LocalDateTime registerDate;
+    //유저가 회원이냐 기관이냐
+    private String status;
+
+    private String provider;
+    //
+    private String createdDate;
+    //유저 위치아이디
+    private String locationId;
+    //유저 프로필사진
     private String profilePic;
-    private String createAt;
-    private String updateAt;
+    //유저 전화번호
+    private String phoneNumber;
+    //유저 자기소개
+    private String introduction;
+
+
+
 
 
 
