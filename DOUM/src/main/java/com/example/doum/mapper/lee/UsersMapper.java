@@ -12,6 +12,6 @@ public interface UsersMapper {
 
    User selectUserById(long id);
 
-   List<MyPageStoryDTO> selectVolunteerActivitiesId(long userId);
+   List<MyPageStoryDTO> selectStoryId(long userId);
 
 }

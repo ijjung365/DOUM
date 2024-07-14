@@ -16,7 +16,7 @@ public class MyPageDTO {
 
     //pk
     private Long storyId;
-    //작성자 .. providerID?
+    //작성자
     private String userId;
     //게시물 제목
     private String title;
