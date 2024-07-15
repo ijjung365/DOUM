@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Component
 @Data
-public class FileDTO {
+public class LeeFileDTO {
     //마이스토리 게시물에 들어가는 파일.
 
 

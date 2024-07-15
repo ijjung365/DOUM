@@ -1,8 +1,8 @@
 package com.example.doum.controller.lee;
 
 
-import com.example.doum.domain.dto.lee.MyPageDTO;
-import com.example.doum.domain.dto.lee.MyPageStoryDTO;
+import com.example.doum.domain.dto.lee.LeeMyPageDTO;
+import com.example.doum.domain.dto.lee.LeeMyPageStoryDTO;
 import com.example.doum.mapper.lee.UsersMapper;
 import com.example.doum.service.lee.MyPageService;
 import lombok.RequiredArgsConstructor;
@@ -29,7 +29,7 @@ public class MyPageController {
     @GetMapping("/write")
     public String writeForm(Model model) {
 
-        model.addAttribute("myPage",new MyPageDTO());
+        model.addAttribute("myPage",new LeeMyPageDTO());
         return "mypage/write";
 
     }
@@ -37,7 +37,7 @@ public class MyPageController {
 
     //게시물 작성 처리
     @PostMapping("/write")
-    public String write(MyPageDTO myPage, @RequestParam("providerId") String providerId, List<MultipartFile> files) {
+    public String write(LeeMyPageDTO myPage, @RequestParam("providerId") String providerId, List<MultipartFile> files) {
 
         myPage.setProviderId(providerId);
 
@@ -52,7 +52,7 @@ public class MyPageController {
     public String story(@PathVariable("storyId") Long storyId, Model model,
                         @AuthenticationPrincipal CustomOAuth2User customOAuth2User) {
 
-        MyPageStoryDTO story = myPageService.getStoryById(storyId, customOAuth2User);
+        LeeMyPageStoryDTO story = myPageService.getStoryById(storyId, customOAuth2User);
         List<FileDTO> files = fileService.getFileListByStoryId(storyId);
 
         model.addAttribute("story",story);

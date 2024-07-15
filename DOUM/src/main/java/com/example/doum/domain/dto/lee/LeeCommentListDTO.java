@@ -6,7 +6,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class CommentListDTO {
+public class LeeCommentListDTO {
 
 
     //개인스토리 댓글 아이디

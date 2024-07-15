@@ -6,7 +6,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class CommentDTO {
+public class LeeCommentDTO {
 
     //마이 페이지 volunteerActivity 게시물에 달린 댓글
     //erd 에서 개인 스토리 댓글 테이블

@@ -1,7 +1,7 @@
 package com.example.doum.mapper.lee;
 
 
-import com.example.doum.domain.dto.lee.MyPageStoryDTO;
+import com.example.doum.domain.dto.lee.LeeMyPageStoryDTO;
 import org.apache.catalina.User;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -12,6 +12,6 @@ public interface UsersMapper {
 
    User selectUserById(long id);
 
-   List<MyPageStoryDTO> selectStoryId(long userId);
+   List<LeeMyPageStoryDTO> selectStoryId(long userId);
 
 }

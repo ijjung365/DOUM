@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Component
 @Data
-public class UsersDTO {
+public class LeeUsersDTO {
 //마이페이지 유저들의 DTO
 //erd 에서 유저 테이블
 
