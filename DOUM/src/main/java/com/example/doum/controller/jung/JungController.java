@@ -12,15 +12,9 @@ import java.util.List;
 @RequestMapping("/jung")
 @RequiredArgsConstructor
 public class JungController {
+
     @GetMapping("/announcement")
     public String announcement(Model model) {
-        /*
-        * 총 공지수 구하기
-        * 총 페이지수 구하기
-        * 공지사항 가져오기(검색 포함)
-        *
-        * 모델로 넘겨주기
-        * */
         return "/jung/announcement";
     }
 
@@ -40,6 +34,8 @@ public class JungController {
     public String appliedVolunteer(Model model) {
         return "/jung/applied-volunteer";
     }
+
+
     @GetMapping("/organization-search")
     public String organizationsearch(Model model) {
         return "/jung/organization-search";

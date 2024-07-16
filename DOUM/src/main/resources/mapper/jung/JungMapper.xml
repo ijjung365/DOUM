@@ -3,8 +3,8 @@
 
 <mapper namespace="com.example.doum.mapper.jung.JungMapper">
 
-    <select id="getTime">
-        select sysdate from tbl_anonymous
+    <select id="tblAnonymousSelectAll">
+        select * from tbl_anonymous
     </select>
     <select id="getDate">
         select sysdate from tbl_user
