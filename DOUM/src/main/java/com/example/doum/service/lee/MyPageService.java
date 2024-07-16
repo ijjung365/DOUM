@@ -1,6 +1,7 @@
 package com.example.doum.service.lee;
 
 
+import com.example.doum.domain.dto.lee.LeeMyPageDTO;
 import com.example.doum.domain.dto.lee.LeeMyPageStoryDTO;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -15,7 +16,7 @@ public interface MyPageService {
     List<LeeMyPageStoryDTO> getStoryActivity();
 
     //게시물(story) 작성
-    void saveStory(LeeMyPageStoryDTO myPageStoryDTO, List<MultipartFile> files);
+    void saveStory(LeeMyPageDTO myPageStoryDTO, List<MultipartFile> files);
 
 
     //게시글 상세보기
