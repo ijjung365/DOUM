@@ -96,13 +96,35 @@
 
 
 
+<!--   Searchuser 관련 -->
+
+
+    <!-- 사용자 목록 조회 -->
+    <!-- 사용자 목록 조회 -->
+    <select id="selectUserList" resultType="UserDTO">
+        SELECT
+            U.USER_ID,
+            U.EMAIL,
+            U.NAME,
+            U.PHONE_NUMBER,
+            U.REGISTER_DATE,
+            U.EMAIL_APPROVE,
+            U.PHONE_APPROVE,
+            U.BIRTH_DATE,
+            U.GENDER,
+            U.INTRODUCTION,
+            (SELECT COUNT(*) FROM TBL_APPLIED_VOLUNTEER AV WHERE AV.USER_ID = U.USER_ID) AS VOLUNTEER_COUNT,
+            (SELECT AVG(R.RATING) FROM TBL_USER_REVIEW R WHERE R.USER_ID = U.USER_ID) AS AVERAGE_RATING
+        FROM
+            TBL_USER U
+    </select>
 
 
 
 
 
 
-    <!--  -->
+
 
 
 
